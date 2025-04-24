@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
-from typing import List
+""" Complex types - list of floats """
+from typing import Callable, Iterator, Union, Optional, List
 
-def sum_list(input_list: list[float]) -> float:
-             """function that takes a list of floats and returns their sum as a float"""
-             return sum(input_list)
+
+def sum_list(input_list: List[float]) -> float:
+    """
+    Takes a list input_list of floats as argument
+    returns their sum as a float.
+    """
+
+    return sum(input_list)
