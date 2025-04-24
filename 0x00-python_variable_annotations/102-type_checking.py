@@ -1,18 +1,19 @@
-from typing import Tuple, List, Union
+#!/usr/bin/env python3
+""" Type Checking  """
+from typing import Tuple, List
 
-def zoom_array(lst: Tuple[Union[int, float]], factor: int = 2) -> List[Union[int, float]]:
-    """
-    Given a tuple `lst`, zooms each item by a given `factor`. The return value is a list with repeated elements.
 
-    Parameters:
-    lst (Tuple[Union[int, float]]): A tuple of integers or floats.
-    factor (int, optional): The factor by which to repeat each element. Default is 2.
-
-    Returns:
-    List[Union[int, float]]: A list with the zoomed-in elements.
-    """
-    zoomed_in: List[Union[int, float]] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """ Zoom Array """
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
     return zoomed_in
+
+
+array = (12, 72, 91)
+
+zoom_2x = zoom_array(array)
+
+zoom_3x = zoom_array(array, 3)
